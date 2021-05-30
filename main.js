@@ -40,3 +40,38 @@ for(let i = 0; i < arr11.length; ++i) {
         console.log(arr11[i]);
     }
 }
+//Lesson-3
+//Task 5
+let palidrome = (str) => {
+    let strLen = str.lenght;
+    strReverse = str.split('').reverse().join('')
+        if(strReverse == str) {
+            return 'true';
+        }else {
+            return 'false';
+        }
+    }
+console.log(palidrome('rhagdt'))
+
+//Task 6
+const min = (a,b) => {
+    return (a < b) ? a : b
+}
+console.log(min(15,120));
+
+const max = (a,b) => {
+    if(a > b) {
+        return a
+    }else {
+        return b
+    }
+}
+console.log(max(52,21));
+
+//Task 7
+let zero = [20,33,30,48,50,88,75,69,10,100];
+const replaceZero = zero.toString().replace(/0/g,'zero');
+console.log(replaceZero);
+let result5 = replaceZero.split();
+console.log((result5))
+//Пока решение такое
