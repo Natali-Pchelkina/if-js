@@ -1,5 +1,5 @@
 //Task 7//
-let user ='Jhon Doe';
+/*let user ='Jhon Doe';
 console.log(user);
 
 let student = 'Natali';
@@ -39,11 +39,10 @@ for(let i = 0; i < arr11.length; ++i) {
     if(!(arr11[i] % 2)) {
         console.log(arr11[i]);
     }
-}
+}*/
 //Lesson-3
 //Task 5
-let palidrome = (str) => {
-    let strLen = str.lenght;
+const palidrome = (str) => {
     strReverse = str.split('').reverse().join('')
         if(strReverse == str) {
             return 'true';
@@ -69,9 +68,13 @@ const max = (a,b) => {
 console.log(max(52,21));
 
 //Task 7
-let zero = [20,33,30,48,50,88,75,69,10,100];
-const replaceZero = zero.toString().replace(/0/g,'zero');
-console.log(replaceZero);
-let result5 = replaceZero.split();
-console.log((result5))
-//Пока решение такое
+const arr = [20,33,30,48,50,88,75,69,10,100];
+const addZero = (arr) => {
+for(let i = 0; i < arr.length; i++){
+    if(!(arr[i] % 10)){
+        arr[i] = ('' + arr[i].replaceAll('0', 'zero'))
+    }
+}
+return arr
+}
+console.log(addZero(arr));
