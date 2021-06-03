@@ -1,5 +1,5 @@
 //Task 7//
-let user ='Jhon Doe';
+/*let user ='Jhon Doe';
 console.log(user);
 
 let student = 'Natali';
@@ -39,4 +39,42 @@ for(let i = 0; i < arr11.length; ++i) {
     if(!(arr11[i] % 2)) {
         console.log(arr11[i]);
     }
+}*/
+//Lesson-3
+//Task 5
+const palidrome = (str) => {
+    strReverse = str.split('').reverse().join('')
+        if(strReverse == str) {
+            return 'true';
+        }else {
+            return 'false';
+        }
+    }
+console.log(palidrome('rhagdt'))
+
+//Task 6
+const min = (a,b) => {
+    return (a < b) ? a : b
 }
+console.log(min(15,120));
+
+const max = (a,b) => {
+    if(a > b) {
+        return a
+    }else {
+        return b
+    }
+}
+console.log(max(52,21));
+
+//Task 7
+const arr = [20,33,30,48,50,88,75,69,10,100];
+const addZero = (arr) => {
+for(let i = 0; i < arr.length; i++){
+    if(!(arr[i] % 10)){
+        arr[i] = ('' + arr[i].replaceAll('0', 'zero'))
+    }
+}
+return arr
+}
+console.log(addZero(arr));
