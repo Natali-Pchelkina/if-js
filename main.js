@@ -39,7 +39,7 @@ for(let i = 0; i < arr11.length; ++i) {
     if(!(arr11[i] % 2)) {
         console.log(arr11[i]);
     }
-}*/
+}
 //Lesson-3
 //Task 5
 const palidrome = (str) => {
@@ -77,4 +77,30 @@ for(let i = 0; i < arr.length; i++){
 }
 return arr
 }
-console.log(addZero(arr));
+console.log(addZero(arr));*/
+
+//Lesson-4
+//Task-5 console.log(sum(5)(2)); // 7
+function sum(a) {
+    return function(b) {
+        return (a + b)
+    }
+}
+console.log(sum(5)(2))
+
+//Task-6 Покрасьте абзацы по клику (событие click)
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+const Paragraphs = document.querySelectorAll('p');
+const changeColor = function() {
+    let x = 0;
+    return function(e) {
+        e.target.style.color = colors[x];
+        x++;
+        if(x == colors.length) {
+            x = 0;
+        }
+    }
+}
+for(let i = 0; i < Paragraphs.length; i++) {
+    Paragraphs[i].addEventListener('click', changeColor());
+}
