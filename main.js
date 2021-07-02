@@ -338,4 +338,58 @@ const hotels = [
   },  {})
   console.log(countries)
 
+  const obj1 = {
+    a: 'a',
+    b: {
+      a: 'a',
+      b: 'b',
+      c: {
+        a: 1,
+      },
+    },
+  };
+  const obj2 = {
+    b: {
+      c: {
+        a: 1,
+      },
+      b: 'b',
+      a: 'a',
+    },
+    a: 'a',
+  };
+  const obj3 = {
+    a: {
+      c: {
+        a: 'a',
+      },
+      b: 'b',
+      a: 'a',
+    },
+    b: 'b',
+  };
+
+  function deepEqual(object1, object2) {
+    if (typeof object1 === typeof object2) {
+        if (object1 === object2) {
+        return true;
+        } else if (object1 && object2) {
+        if (typeof object1 === 'object' && typeof object2 === 'object') {
+          for (let key in object1) {
+            for (let key2 in object2) {
+              if (key === key2) {
+                if (!deepEqual(object1[key], object2[key2])) {
+                  return false;
+                }
+              }
+            }
+          }
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+  console.log(deepEqual(obj1, obj2)); 
+  console.log(deepEqual(obj1, obj3));
   
